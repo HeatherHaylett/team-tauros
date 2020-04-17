@@ -19,8 +19,8 @@ CREATE TABLE users (
   google_id int UNIQUE,
   image_url varchar(255),
   name varchar(255),
-  longitude int,
-  latitude int
+  longitude DECIMAL(11, 8),
+  latitude DECIMAL(10, 8)
 );
 
 CREATE TABLE messages (
@@ -59,4 +59,6 @@ CREATE TABLE characters (
 INSERT INTO messages (message) VALUES ('hi');
 INSERT INTO messages (message) VALUES ('this is an example message');
 INSERT INTO rooms (name, host_id, host_long, host_lat, radius, details, date, start, end) VALUES ('Pokemon Party', 1, 1234, 4234234, 500, 'This is a detail of Pokemon Party', '2020-07-20', '00:00:00', '23:59:59');
-INSERT INTO rooms (name, host_id, host_long, host_lat, radius, details, date, start, end) VALUES ('League Party', 2, 1234, 1242123, 400, 'This is a detail of League Party', '2020-06-20', '00:00:00', '23:59:59');
+INSERT INTO rooms (name, host_id, host_long, host_lat, radius, details, date, start, end) VALUES ('League Party', 2, 1234, 1242123, 1, 'This is a detail of League Party', '2020-06-20', '00:00:00', '23:59:59');
+INSERT INTO users (name, longitude, latitude) VALUES ('Heather2', -90.063940, 29.959790);
+INSERT INTO users (name, longitude, latitude) VALUES ('Chris2', -90.142810, 30.010544);
